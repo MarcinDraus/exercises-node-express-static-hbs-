@@ -1,0 +1,19 @@
+<!-- views/error-page.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found</title>
+</head>
+<body>
+  <img src="/page-not-found.png" alt="Page Not Found">
+  <p id="errorMessage"></p>
+
+  <script>
+    const errorMessage = new URLSearchParams(window.location.search).get('errorMessage');
+    document.getElementById('errorMessage').innerText = errorMessage;
+  </script>
+</body>
+</html>
